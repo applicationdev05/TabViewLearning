@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04278F922FA672B300DFB88D /* NetworkMonitorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04278F912FA672B300DFB88D /* NetworkMonitorKit */; };
 		043FE96F2F93FCB700E1E9F1 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 043FE96E2F93FCB700E1E9F1 /* .swiftlint.yml */; };
 		04A08EBE2F94A51D00EA0354 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 04A08EBD2F94A51D00EA0354 /* Lottie */; };
 		04A08F422F94A5AC00EA0354 /* Cache in Frameworks */ = {isa = PBXBuildFile; productRef = 04A08F412F94A5AC00EA0354 /* Cache */; };
@@ -41,15 +42,12 @@
 		F4FA677C2F8FBECD00EE5DB1 /* AccountSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA677B2F8FBECD00EE5DB1 /* AccountSettingsView.swift */; };
 		F4FA677E2F8FBEE600EE5DB1 /* PrivacySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA677D2F8FBEE600EE5DB1 /* PrivacySettingsView.swift */; };
 		F4FA67802F8FC1A600EE5DB1 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA677F2F8FC1A600EE5DB1 /* NavigationCoordinator.swift */; };
-		F4FA67842F909D1100EE5DB1 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA67832F909D1100EE5DB1 /* ReachabilityManager.swift */; };
 		F4FA67862F90C28D00EE5DB1 /* AuthContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA67852F90C28D00EE5DB1 /* AuthContainerView.swift */; };
 		F4FA67882F90C88D00EE5DB1 /* NavigationRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA67872F90C88D00EE5DB1 /* NavigationRouting.swift */; };
 		F4FA678A2F90CB5300EE5DB1 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA67892F90CB5300EE5DB1 /* ResetPasswordView.swift */; };
 		F4FA678C2F90DE9100EE5DB1 /* SheetNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA678B2F90DE9100EE5DB1 /* SheetNavigationState.swift */; };
 		F4FA678E2F90DFB200EE5DB1 /* ResetPasswordSheetContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA678D2F90DFB200EE5DB1 /* ResetPasswordSheetContainer.swift */; };
 		F4FA67912F90E83000EE5DB1 /* ResetPasswordConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA67902F90E82F00EE5DB1 /* ResetPasswordConfirmationView.swift */; };
-		F4FA67982F90FCDF00EE5DB1 /* NetworkLostWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA67972F90FCDF00EE5DB1 /* NetworkLostWindowManager.swift */; };
-		F4FA679A2F90FD1400EE5DB1 /* NetworkLostOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FA67992F90FD1400EE5DB1 /* NetworkLostOverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,15 +94,12 @@
 		F4FA677B2F8FBECD00EE5DB1 /* AccountSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsView.swift; sourceTree = "<group>"; };
 		F4FA677D2F8FBEE600EE5DB1 /* PrivacySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySettingsView.swift; sourceTree = "<group>"; };
 		F4FA677F2F8FC1A600EE5DB1 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
-		F4FA67832F909D1100EE5DB1 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		F4FA67852F90C28D00EE5DB1 /* AuthContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthContainerView.swift; sourceTree = "<group>"; };
 		F4FA67872F90C88D00EE5DB1 /* NavigationRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouting.swift; sourceTree = "<group>"; };
 		F4FA67892F90CB5300EE5DB1 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		F4FA678B2F90DE9100EE5DB1 /* SheetNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetNavigationState.swift; sourceTree = "<group>"; };
 		F4FA678D2F90DFB200EE5DB1 /* ResetPasswordSheetContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordSheetContainer.swift; sourceTree = "<group>"; };
 		F4FA67902F90E82F00EE5DB1 /* ResetPasswordConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordConfirmationView.swift; sourceTree = "<group>"; };
-		F4FA67972F90FCDF00EE5DB1 /* NetworkLostWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLostWindowManager.swift; sourceTree = "<group>"; };
-		F4FA67992F90FD1400EE5DB1 /* NetworkLostOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLostOverlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,12 +117,20 @@
 				04A08F452F94A8F200EA0354 /* Kingfisher in Frameworks */,
 				04A08EBE2F94A51D00EA0354 /* Lottie in Frameworks */,
 				04A08F422F94A5AC00EA0354 /* Cache in Frameworks */,
+				04278F922FA672B300DFB88D /* NetworkMonitorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04278F902FA672B300DFB88D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		04A08F532F94E10F00EA0354 /* TabViewAndRoutingTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +145,7 @@
 				043FE96E2F93FCB700E1E9F1 /* .swiftlint.yml */,
 				F4FA674D2F8FAC0100EE5DB1 /* TabViewAndRouting */,
 				04A08F532F94E10F00EA0354 /* TabViewAndRoutingTests */,
+				04278F902FA672B300DFB88D /* Frameworks */,
 				F4FA66F72F8FA4B900EE5DB1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -296,7 +300,6 @@
 		F4FA67822F909CF900EE5DB1 /* UtilityAndManagers */ = {
 			isa = PBXGroup;
 			children = (
-				F4FA67832F909D1100EE5DB1 /* ReachabilityManager.swift */,
 			);
 			path = UtilityAndManagers;
 			sourceTree = "<group>";
@@ -314,8 +317,6 @@
 		F4FA67962F90FBEB00EE5DB1 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				F4FA67972F90FCDF00EE5DB1 /* NetworkLostWindowManager.swift */,
-				F4FA67992F90FD1400EE5DB1 /* NetworkLostOverlayView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -361,6 +362,7 @@
 				04A08EBD2F94A51D00EA0354 /* Lottie */,
 				04A08F412F94A5AC00EA0354 /* Cache */,
 				04A08F442F94A8F200EA0354 /* Kingfisher */,
+				04278F912FA672B300DFB88D /* NetworkMonitorKit */,
 			);
 			productName = TabViewAndRouting;
 			productReference = F4FA66F62F8FA4B900EE5DB1 /* TabViewAndRouting.app */;
@@ -399,6 +401,7 @@
 				04A08EBC2F94A51D00EA0354 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				04A08F402F94A5AC00EA0354 /* XCRemoteSwiftPackageReference "Cache" */,
 				04A08F432F94A8F200EA0354 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				04278F8F2FA671AD00DFB88D /* XCRemoteSwiftPackageReference "NetworkMonitorKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F4FA66F72F8FA4B900EE5DB1 /* Products */;
@@ -469,7 +472,6 @@
 				F4FA67502F8FAC0100EE5DB1 /* AuthNavigationState.swift in Sources */,
 				F4FA67522F8FAC0100EE5DB1 /* ForgotPasswordView.swift in Sources */,
 				F4FA678A2F90CB5300EE5DB1 /* ResetPasswordView.swift in Sources */,
-				F4FA67842F909D1100EE5DB1 /* ReachabilityManager.swift in Sources */,
 				F4FA677C2F8FBECD00EE5DB1 /* AccountSettingsView.swift in Sources */,
 				F4FA67532F8FAC0100EE5DB1 /* HomeDetailView.swift in Sources */,
 				F4FA67542F8FAC0100EE5DB1 /* HomeRoute.swift in Sources */,
@@ -478,9 +480,7 @@
 				F4FA67572F8FAC0100EE5DB1 /* MainTabView.swift in Sources */,
 				F4FA67652F8FADA400EE5DB1 /* AuthRoute.swift in Sources */,
 				F4FA67912F90E83000EE5DB1 /* ResetPasswordConfirmationView.swift in Sources */,
-				F4FA67982F90FCDF00EE5DB1 /* NetworkLostWindowManager.swift in Sources */,
 				F4FA67782F8FBDAC00EE5DB1 /* ProfileTabContainerView.swift in Sources */,
-				F4FA679A2F90FD1400EE5DB1 /* NetworkLostOverlayView.swift in Sources */,
 				F4FA67582F8FAC0100EE5DB1 /* ProfileEditView.swift in Sources */,
 				F4FA67592F8FAC0100EE5DB1 /* ProfileRoute.swift in Sources */,
 				F4FA675A2F8FAC0100EE5DB1 /* ProfileView.swift in Sources */,
@@ -779,6 +779,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		04278F8F2FA671AD00DFB88D /* XCRemoteSwiftPackageReference "NetworkMonitorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/applicationdev05/NetworkMonitorKit";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
 		04A08EBC2F94A51D00EA0354 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
@@ -806,6 +814,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		04278F912FA672B300DFB88D /* NetworkMonitorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04278F8F2FA671AD00DFB88D /* XCRemoteSwiftPackageReference "NetworkMonitorKit" */;
+			productName = NetworkMonitorKit;
+		};
 		04A08EBD2F94A51D00EA0354 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 04A08EBC2F94A51D00EA0354 /* XCRemoteSwiftPackageReference "lottie-spm" */;

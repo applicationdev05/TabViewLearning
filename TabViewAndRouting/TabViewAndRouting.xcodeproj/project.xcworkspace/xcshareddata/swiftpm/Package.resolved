@@ -1,5 +1,5 @@
 {
-  "originHash" : "739b5630bef8f2a172d5e28693a63c02c17d684db43345ab8182b2bdaa1bde46",
+  "originHash" : "6773a15e2581248c7e6c7392f50a9f24247c9aa70ef94a7fa8f355e07d662aed",
   "pins" : [
     {
       "identity" : "cache",
@@ -26,6 +26,15 @@
       "state" : {
         "revision" : "69faaefa7721fba9e434a52c16adf4329c9084db",
         "version" : "4.6.0"
+      }
+    },
+    {
+      "identity" : "networkmonitorkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/applicationdev05/NetworkMonitorKit",
+      "state" : {
+        "revision" : "135776c2a6887c46af2a67257595fb2ad9879e9b",
+        "version" : "1.0.0"
       }
     }
   ],

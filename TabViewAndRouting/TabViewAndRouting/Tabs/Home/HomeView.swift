@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NetworkMonitorKit
 
 struct HomeView: View {
     @EnvironmentObject private var nav: TabNavigationState<HomeRoute>
