@@ -8,7 +8,13 @@
 import SwiftUI
 import UIKit
 
-final class NetworkLostWindowManager {
+protocol NetworkLostWindowManagerProtocol {
+    var isOverlayShowing: Bool { get }
+    func showNetworkLostOverlay()
+    func hideNetworkLostOverlay()
+}
+
+final class NetworkLostWindowManager: NetworkLostWindowManagerProtocol {
     static let shared = NetworkLostWindowManager()
     private var networkLostWindow: UIWindow?
     private(set) var isOverlayShowing = false

@@ -57,14 +57,14 @@ struct NetworkLostOverlayView: View {
         }
     }
 
+    @MainActor
     private func retryConnection() {
         isRetrying = true
-        // Perform the manual check after a short delay to avoid blocking UI
-        DispatchQueue.global().asyncAfter(deadline: .now() + 0.1) {
+        Task { @MainActor in
+            // Keep a slight delay so the progress state renders before the check starts.
+            try? await Task.sleep(for: .milliseconds(100))
             ReachabilityManager.shared.manualCheckAndUpdate()
-            DispatchQueue.main.async {
-                isRetrying = false
-            }
+            isRetrying = false
         }
     }
 }

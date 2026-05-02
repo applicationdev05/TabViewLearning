@@ -10,10 +10,34 @@ import Network
 import Combine
 import SwiftUI
 
+protocol ReachabilityManagerProtocol {
+    var isConnected: Bool { get }
+    func startMonitoring()
+    func handlePathUpdate(_ path: NWPath)
+    func getConnectionType(from path: NWPath) -> ConnectionType
+    func manualCheckAndUpdate()
+    func fetchCurrentNetworkState() async -> (isConnected: Bool, type: ConnectionType)
+}
+
+enum ConnectionType {
+    case wifi, cellular, wiredEthernet, loopback, other, unknown
+
+    var description: String {
+        switch self {
+        case .wifi: return "Wi-Fi"
+        case .cellular: return "Cellular"
+        case .wiredEthernet: return "Wired Ethernet"
+        case .loopback: return "Loopback"
+        case .other: return "Other"
+        case .unknown: return "Unknown"
+        }
+    }
+}
+
 /// A reachability manager that monitors network connectivity.
 /// Uses Apple's modern `NWPathMonitor` (no third‑party dependencies).
 @MainActor
-final class ReachabilityManager: ObservableObject {
+final class ReachabilityManager: ObservableObject, ReachabilityManagerProtocol {
 
     // MARK: - Singleton
     static let shared = ReachabilityManager()
@@ -25,27 +49,6 @@ final class ReachabilityManager: ObservableObject {
     // MARK: - Private Properties
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue(label: "ReachabilityManagerQueue")
-
-    // MARK: - Connection Types
-    enum ConnectionType {
-        case wifi
-        case cellular
-        case wiredEthernet
-        case loopback
-        case other
-        case unknown
-
-        var description: String {
-            switch self {
-            case .wifi: return "Wi-Fi"
-            case .cellular: return "Cellular"
-            case .wiredEthernet: return "Wired Ethernet"
-            case .loopback: return "Loopback"
-            case .other: return "Other"
-            case .unknown: return "Unknown"
-            }
-        }
-    }
 
     // MARK: - Init
     private init() {
@@ -69,7 +72,7 @@ final class ReachabilityManager: ObservableObject {
     }
 
     // MARK: - Path Handling
-    private func handlePathUpdate(_ path: NWPath) {
+    internal func handlePathUpdate(_ path: NWPath) {
         let newStatus = path.status == .satisfied
         let newType = getConnectionType(from: path)
 
@@ -88,7 +91,7 @@ final class ReachabilityManager: ObservableObject {
     }
 
     // MARK: - Helpers
-    private func getConnectionType(from path: NWPath) -> ConnectionType {
+    internal func getConnectionType(from path: NWPath) -> ConnectionType {
         if path.usesInterfaceType(.wifi) {
             return .wifi
         } else if path.usesInterfaceType(.cellular) {
@@ -123,7 +126,7 @@ final class ReachabilityManager: ObservableObject {
         }
     }
 
-    private func fetchCurrentNetworkState() async -> (isConnected: Bool, type: ConnectionType) {
+    internal func fetchCurrentNetworkState() async -> (isConnected: Bool, type: ConnectionType) {
         await withCheckedContinuation { continuation in
             let monitor = NWPathMonitor()
 
