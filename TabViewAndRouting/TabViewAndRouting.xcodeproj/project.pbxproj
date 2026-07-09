@@ -162,7 +162,6 @@
 		F4FA674D2F8FAC0100EE5DB1 /* TabViewAndRouting */ = {
 			isa = PBXGroup;
 			children = (
-				F4FA67962F90FBEB00EE5DB1 /* ReusableViews */,
 				F4FA67822F909CF900EE5DB1 /* UtilityAndManagers */,
 				F4FA674C2F8FAC0100EE5DB1 /* TabViewAndRoutingApp.swift */,
 				F4FA67452F8FAC0100EE5DB1 /* RootView.swift */,
@@ -312,13 +311,6 @@
 				F4FA67902F90E82F00EE5DB1 /* ResetPasswordConfirmationView.swift */,
 			);
 			path = ResetPassword;
-			sourceTree = "<group>";
-		};
-		F4FA67962F90FBEB00EE5DB1 /* ReusableViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
