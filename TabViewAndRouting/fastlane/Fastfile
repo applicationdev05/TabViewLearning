@@ -4,7 +4,7 @@ platform :ios do
   lane :test do
     run_tests(
       scheme: "TabViewAndRouting",
-      destination: "platform=iOS Simulator,name=iPhone 17,OS=26.5"
+      destination: "platform=iOS Simulator"
     )
   end
 

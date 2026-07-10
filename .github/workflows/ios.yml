@@ -11,22 +11,19 @@ jobs:
     runs-on: macos-latest
     defaults:
       run:
-        working-directory: TabViewRouting   # All "run" steps will use this directory
+        working-directory: TabViewAndRouting   # Correct folder name
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Select Xcode version
         run: sudo xcode-select -s /Applications/Xcode.app
-        # This step doesn't need the working-directory, so override it
         working-directory: '.'
 
-      - name: Setup Ruby and install gems
-        working-directory: TabViewRouting
+      - name: Install Ruby gems
         run: |
           gem install bundler
           bundle install
 
       - name: Run tests
         run: bundle exec fastlane ios test
-        # This will automatically use the working-directory from defaults
