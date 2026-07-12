@@ -1,0 +1,42 @@
+{
+  "originHash" : "6773a15e2581248c7e6c7392f50a9f24247c9aa70ef94a7fa8f355e07d662aed",
+  "pins" : [
+    {
+      "identity" : "cache",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hyperoslo/Cache.git",
+      "state" : {
+        "revision" : "24e47109e31b2031cb26e25cc1b81b607496066c",
+        "version" : "7.4.0"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "c152c1915f60c51e4afa0752656993ee5b3c63db",
+        "version" : "8.8.1"
+      }
+    },
+    {
+      "identity" : "lottie-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-spm.git",
+      "state" : {
+        "revision" : "69faaefa7721fba9e434a52c16adf4329c9084db",
+        "version" : "4.6.0"
+      }
+    },
+    {
+      "identity" : "networkmonitorkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/applicationdev05/NetworkMonitorKit",
+      "state" : {
+        "revision" : "135776c2a6887c46af2a67257595fb2ad9879e9b",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
