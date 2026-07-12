@@ -11,13 +11,17 @@ jobs:
     runs-on: macos-latest
     defaults:
       run:
-        working-directory: TabViewAndRouting   # Correct folder name
+        working-directory: TabViewAndRouting
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Configure Git for private dependencies
+        run: |
+          git config --global url."https://${{ secrets.GH_PAT_Token }}@github.com/".insteadOf "https://github.com/"
+
       - name: Select Xcode version
-        run: sudo xcode-select -s /Applications/Xcode.app
+        run: sudo xcode-select -s /Applications/Xcode_26.5.app
         working-directory: '.'
 
       - name: Install Ruby gems
