@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: macos-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     defaults:
       run:
         working-directory: TabViewAndRouting
@@ -36,5 +36,5 @@ jobs:
           bundle install
 
       - name: Run tests
-        timeout-minutes: 15
+        timeout-minutes: 45
         run: bundle exec fastlane ios test

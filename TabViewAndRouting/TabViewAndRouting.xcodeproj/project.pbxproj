@@ -776,7 +776,7 @@
 			repositoryURL = "https://github.com/applicationdev05/NetworkMonitorKit";
 			requirement = {
 				kind = exactVersion;
-				version = 1.0.0;
+				version = 1.0.1;
 			};
 		};
 		04A08EBC2F94A51D00EA0354 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {

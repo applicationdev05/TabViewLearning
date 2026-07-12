@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/applicationdev05/NetworkMonitorKit",
       "state" : {
-        "revision" : "135776c2a6887c46af2a67257595fb2ad9879e9b",
-        "version" : "1.0.0"
+        "revision" : "e77371dc01803844a39fb07ff20f05b6a7177caa",
+        "version" : "1.0.1"
       }
     }
   ],
