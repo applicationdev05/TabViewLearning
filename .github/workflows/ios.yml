@@ -6,51 +6,24 @@ on:
   pull_request:
     branches: [ main ]
 
-env:
-  GIT_LFS_SKIP_SMUDGE: 1      # Skip LFS smudge globally
-
 jobs:
   test:
     runs-on: macos-latest
-    timeout-minutes: 25
     defaults:
       run:
         working-directory: TabViewAndRouting
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Configure Git for private dependencies
         run: |
           git config --global url."https://x-access-token:${{ secrets.GH_PAT_TOKEN }}@github.com/".insteadOf "https://github.com/"
-          git config --global lfs.fetchexclude "*"   # Do not fetch LFS objects
-
-      - name: Clear all SPM caches
-        run: |
-          rm -rf ~/Library/Caches/org.swift.swiftpm
-          rm -rf ~/Library/Developer/Xcode/DerivedData
-          rm -rf .build
-
-      - name: Verify Git clone of NetworkMonitorKit
-        timeout-minutes: 2
-        run: |
-          git clone https://github.com/applicationdev05/NetworkMonitorKit /tmp/NetworkMonitorKit_ci_test
-          echo "Clone succeeded"
-
-      - name: Resolve Swift packages (with timeout)
-        timeout-minutes: 5
-        run: |
-          xcodebuild -resolvePackageDependencies \
-            -scheme TabViewAndRouting \
-            -project ./TabViewAndRouting.xcodeproj \
-            -destination "platform=iOS Simulator" \
-            -disablePackageRepositoryCache \
-            -verbose
 
       - name: Install Ruby gems
         run: |
           gem install bundler
           bundle install
 
-      - name: Run tests (skip package resolution)
-        timeout-minutes: 15
-        run: bundle exec fastlane ios test skip_package_dependencies_resolution:true
+      - name: Run tests
+        run: bundle exec fastlane ios test
