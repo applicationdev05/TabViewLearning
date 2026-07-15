@@ -6,10 +6,13 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  GIT_LFS_SKIP_SMUDGE: 1      # Skip LFS smudge globally
+
 jobs:
   test:
     runs-on: macos-latest
-    timeout-minutes: 25          # Whole job must finish in 25 min
+    timeout-minutes: 25
     defaults:
       run:
         working-directory: TabViewAndRouting
@@ -19,12 +22,19 @@ jobs:
       - name: Configure Git for private dependencies
         run: |
           git config --global url."https://x-access-token:${{ secrets.GH_PAT_TOKEN }}@github.com/".insteadOf "https://github.com/"
+          git config --global lfs.fetchexclude "*"   # Do not fetch LFS objects
 
       - name: Clear all SPM caches
         run: |
           rm -rf ~/Library/Caches/org.swift.swiftpm
           rm -rf ~/Library/Developer/Xcode/DerivedData
           rm -rf .build
+
+      - name: Verify Git clone of NetworkMonitorKit
+        timeout-minutes: 2
+        run: |
+          git clone https://github.com/applicationdev05/NetworkMonitorKit /tmp/NetworkMonitorKit_ci_test
+          echo "Clone succeeded"
 
       - name: Resolve Swift packages (with timeout)
         timeout-minutes: 5
