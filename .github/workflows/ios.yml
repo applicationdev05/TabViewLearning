@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: macos-latest
-    timeout-minutes: 90
+    timeout-minutes: 25          # Whole job must finish in 25 min
     defaults:
       run:
         working-directory: TabViewAndRouting
@@ -20,17 +20,27 @@ jobs:
         run: |
           git config --global url."https://x-access-token:${{ secrets.GH_PAT_TOKEN }}@github.com/".insteadOf "https://github.com/"
 
-      - name: Clear old SPM caches (prevent hang)
+      - name: Clear all SPM caches
         run: |
           rm -rf ~/Library/Caches/org.swift.swiftpm
           rm -rf ~/Library/Developer/Xcode/DerivedData
-          rm -rf TabViewAndRouting/.build
+          rm -rf .build
+
+      - name: Resolve Swift packages (with timeout)
+        timeout-minutes: 5
+        run: |
+          xcodebuild -resolvePackageDependencies \
+            -scheme TabViewAndRouting \
+            -project ./TabViewAndRouting.xcodeproj \
+            -destination "platform=iOS Simulator" \
+            -disablePackageRepositoryCache \
+            -verbose
 
       - name: Install Ruby gems
         run: |
           gem install bundler
           bundle install
 
-      - name: Run tests
-        timeout-minutes: 80
-        run: bundle exec fastlane ios test
+      - name: Run tests (skip package resolution)
+        timeout-minutes: 15
+        run: bundle exec fastlane ios test skip_package_dependencies_resolution:true
