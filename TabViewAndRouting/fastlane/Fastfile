@@ -1,0 +1,21 @@
+# fastlane/Fastfile
+platform :ios do
+  desc "Run unit tests"
+  lane :test do
+  run_tests(
+    scheme: "TabViewAndRouting",
+    destination: "platform=iOS Simulator,name=iPhone 17,OS=26.5"
+  )
+end
+
+  desc "Build the app"
+  lane :build do
+    build_app(scheme: "TabViewAndRouting")
+  end
+
+  desc "Build and run tests"
+  lane :ci do
+    test
+    build
+  end
+end
