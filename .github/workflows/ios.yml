@@ -23,6 +23,11 @@ jobs:
         run: |
           gem install bundler
           bundle install
+          
+      - name: Install SwiftLint and run lint
+        run: |
+          brew install swiftlint
+          bundle exec fastlane ios lint
 
       - name: Run tests
         run: bundle exec fastlane ios test

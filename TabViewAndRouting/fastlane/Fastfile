@@ -1,5 +1,11 @@
 # fastlane/Fastfile
 platform :ios do
+  desc "Run SwiftLint"
+  lane :lint do
+    swiftlint(
+      config_file: ".swiftlint.yml"
+    )
+  end
   desc "Run unit tests"
   lane :test do
   run_tests(

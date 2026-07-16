@@ -5,7 +5,7 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: run_tests" time="28.332189">
+      <testcase classname="fastlane.lanes" name="0: swiftlint" time="0.789213">
         
       </testcase>
     
