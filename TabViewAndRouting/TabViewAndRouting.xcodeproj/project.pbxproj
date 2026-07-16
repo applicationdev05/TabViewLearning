@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04278F922FA672B300DFB88D /* NetworkMonitorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04278F912FA672B300DFB88D /* NetworkMonitorKit */; };
 		043FE96F2F93FCB700E1E9F1 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 043FE96E2F93FCB700E1E9F1 /* .swiftlint.yml */; };
 		04A08EBE2F94A51D00EA0354 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 04A08EBD2F94A51D00EA0354 /* Lottie */; };
 		04A08F422F94A5AC00EA0354 /* Cache in Frameworks */ = {isa = PBXBuildFile; productRef = 04A08F412F94A5AC00EA0354 /* Cache */; };
@@ -117,7 +116,6 @@
 				04A08F452F94A8F200EA0354 /* Kingfisher in Frameworks */,
 				04A08EBE2F94A51D00EA0354 /* Lottie in Frameworks */,
 				04A08F422F94A5AC00EA0354 /* Cache in Frameworks */,
-				04278F922FA672B300DFB88D /* NetworkMonitorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +352,6 @@
 				04A08EBD2F94A51D00EA0354 /* Lottie */,
 				04A08F412F94A5AC00EA0354 /* Cache */,
 				04A08F442F94A8F200EA0354 /* Kingfisher */,
-				04278F912FA672B300DFB88D /* NetworkMonitorKit */,
 			);
 			productName = TabViewAndRouting;
 			productReference = F4FA66F62F8FA4B900EE5DB1 /* TabViewAndRouting.app */;
@@ -368,7 +365,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2630;
-				LastUpgradeCheck = 2640;
+				LastUpgradeCheck = 2660;
 				TargetAttributes = {
 					04A08F492F94AEF100EA0354 = {
 						CreatedOnToolsVersion = 26.3;
@@ -393,7 +390,6 @@
 				04A08EBC2F94A51D00EA0354 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				04A08F402F94A5AC00EA0354 /* XCRemoteSwiftPackageReference "Cache" */,
 				04A08F432F94A8F200EA0354 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				04278F8F2FA671AD00DFB88D /* XCRemoteSwiftPackageReference "NetworkMonitorKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F4FA66F72F8FA4B900EE5DB1 /* Products */;
@@ -611,6 +607,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -667,6 +664,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -771,14 +769,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		04278F8F2FA671AD00DFB88D /* XCRemoteSwiftPackageReference "NetworkMonitorKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/applicationdev05/NetworkMonitorKit";
-			requirement = {
-				kind = exactVersion;
-				version = 1.0.1;
-			};
-		};
 		04A08EBC2F94A51D00EA0354 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
@@ -806,11 +796,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		04278F912FA672B300DFB88D /* NetworkMonitorKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 04278F8F2FA671AD00DFB88D /* XCRemoteSwiftPackageReference "NetworkMonitorKit" */;
-			productName = NetworkMonitorKit;
-		};
 		04A08EBD2F94A51D00EA0354 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 04A08EBC2F94A51D00EA0354 /* XCRemoteSwiftPackageReference "lottie-spm" */;

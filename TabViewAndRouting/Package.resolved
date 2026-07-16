@@ -27,15 +27,6 @@
         "revision" : "69faaefa7721fba9e434a52c16adf4329c9084db",
         "version" : "4.6.0"
       }
-    },
-    {
-      "identity" : "networkmonitorkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/applicationdev05/NetworkMonitorKit",
-      "state" : {
-        "revision" : "135776c2a6887c46af2a67257595fb2ad9879e9b",
-        "version" : "1.0.1"
-      }
     }
   ],
   "version" : 3

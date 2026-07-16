@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import NetworkMonitorKit
+// import NetworkMonitorKit
 
 @main
 struct TabViewAndRoutingApp: App {
@@ -17,7 +17,7 @@ struct TabViewAndRoutingApp: App {
         WindowGroup {
             RootView()
                 .environmentObject(appState)
-                .observeReachability() /// enabling Reachability for whole app
+                // .observeReachability() /// enabling Reachability for whole app
         }
     }
 }

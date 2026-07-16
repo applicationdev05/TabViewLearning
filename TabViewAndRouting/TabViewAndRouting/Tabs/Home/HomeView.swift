@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import NetworkMonitorKit
+// import NetworkMonitorKit
 
 struct HomeView: View {
     @EnvironmentObject private var nav: TabNavigationState<HomeRoute>
@@ -19,7 +19,7 @@ struct HomeView: View {
             }
 
             Button("Simulate No Network") {
-                NetworkLostWindowManager.shared.showNetworkLostOverlay()
+                // NetworkLostWindowManager.shared.showNetworkLostOverlay()
             }
         }
         .navigationTitle("Home")
