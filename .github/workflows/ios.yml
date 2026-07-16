@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 120   # base timeout in seconds
+  FASTLANE_XCODEBUILD_SETTINGS_RETRIES: 3     # optional, default is 4
+
 jobs:
   test:
     runs-on: macos-latest
@@ -13,8 +17,7 @@ jobs:
       run:
         working-directory: TabViewAndRouting
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Install Ruby gems
         run: |
