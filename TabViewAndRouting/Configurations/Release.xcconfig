@@ -1,0 +1,13 @@
+//
+//  Release.xcconfig
+//  TabViewAndRouting
+//
+//  Created by Rajat on 21/07/26.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+API_BASE_URL = https:/$()/api.company.com
+APP_DISPLAY_NAME=TabViewAndRouting
+APP_ENV=PROD

@@ -13,7 +13,16 @@ struct RootView: View {
     @StateObject private var navigationCoordinator: NavigationCoordinator = NavigationCoordinator()
 
     var body: some View {
-        viewAsPerState()
+        viewAsPerState().onAppear {
+            logBaseURL()
+        }
+    }
+
+    private func logBaseURL() {
+        guard let apiURL = Bundle.main.object(forInfoDictionaryKey: "API_BASE_URL") as? String else {
+            fatalError("API_BASE_URL not found")
+        }
+        debugPrint(apiURL)
     }
 
     @ViewBuilder private func viewAsPerState() -> some View {

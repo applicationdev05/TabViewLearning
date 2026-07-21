@@ -1,0 +1,13 @@
+//
+//  Debug-Prod.xcconfig
+//  TabViewAndRouting
+//
+//  Created by Rajat on 21/07/26.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+API_BASE_URL = https:/$()/Prod-api.company.com
+APP_DISPLAY_NAME=TabViewAndRouting Prod
+APP_ENV=PROD
